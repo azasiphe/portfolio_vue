@@ -10,7 +10,7 @@
       <router-link to="/testimonials">Testimonials</router-link>|
       <router-link to="/contact">Contact</router-link>
     </nav>
-    <router-view/>
+    
   </template>
   <script>
   export default {
