@@ -1,0 +1,51 @@
+{
+    "education": [
+      {
+        "Id": 1,
+        "schoolName": "Kwamfundo High School",
+        "Year": "2018 - 2022"
+      },
+      {
+        "Id": 2,
+        "schoolName": "Code Telligence",
+        "Year": "Jan 2023 - Jun 2023"
+      },
+      {
+        "Id": 3,
+        "schoolName": "Life Choices",
+        "Year": "Sep 2023 - Present"
+      }
+    ],
+    "skills": [
+      {
+        "Id": 1,
+        "skillName": "HTML",
+        "Level": "Intermediate",
+        "imageUrl": ""
+      },
+      {
+        "Id": 2,
+        "skillName": "CSS",
+        "Level": "Intermediate",
+        "imageUrl": ""
+      },
+      {
+        "Id": 3,
+        "skillName": "JavaScript",
+        "Level": "Intermediate",
+        "imageUrl": ""
+      },
+      {
+        "Id": 4,
+        "skillName": "Vue.js",
+        "Level": "Intermediate",
+        "imageUrl": ""
+      },
+      {
+        "Id": 5,
+        "skillName": "Python",
+        "Level": "Intermediate",
+        "imageUrl": ""
+      }
+    ]
+  }
