@@ -1,5 +1,6 @@
 {
-    "education": [
+    "data":[
+        {"education": [
       {
         "Id": 1,
         "schoolName": "Kwamfundo High School",
@@ -15,8 +16,8 @@
         "schoolName": "Life Choices",
         "Year": "Sep 2023 - Present"
       }
-    ],
-    "skills": [
+    ]},
+    {"skills": [
       {
         "Id": 1,
         "skillName": "HTML",
@@ -47,5 +48,5 @@
         "Level": "Intermediate",
         "imageUrl": ""
       }
-    ]
-  }
+    ]}]
+    }
