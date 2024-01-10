@@ -4,7 +4,8 @@
       {
         "Id": 1,
         "schoolName": "Kwamfundo High School",
-        "Year": "2018 - 2022"
+        "Year": " 2018 - 2022",
+        "description": "It was a great journey at school. Subjects included physics, maths, life science, and geography, which kept me longing for more challenges."
       },
       {
         "Id": 2,
@@ -22,31 +23,35 @@
         "Id": 1,
         "skillName": "HTML",
         "Level": "Intermediate",
-        "imageUrl": ""
+        "url": "https://i.postimg.cc/C5Vmp3w3/download-17.png"
       },
       {
         "Id": 2,
         "skillName": "CSS",
         "Level": "Intermediate",
-        "imageUrl": ""
+        "url": "https://i.postimg.cc/W3ShsrVs/download-36.jpg"
       },
+      
       {
         "Id": 3,
-        "skillName": "JavaScript",
+        "skillName": "Vue.js",
         "Level": "Intermediate",
-        "imageUrl": ""
+        "url": "https://i.postimg.cc/dtGD0zwW/download-19.png"
       },
       {
         "Id": 4,
-        "skillName": "Vue.js",
-        "Level": "Intermediate",
-        "imageUrl": ""
-      },
-      {
-        "Id": 5,
         "skillName": "Python",
         "Level": "Intermediate",
-        "imageUrl": ""
+        "url": "https://i.postimg.cc/FKCHqvVK/download-20.png"
+      },{
+        "Id": 5,
+        "skillName": "Bootstrap",
+        "Level": "Intermediate",
+        "url": "https://i.postimg.cc/CK5Fbtpp/download-22.png"
+      },{
+        "Id": 6,
+        "skillName": "Figma",
+        "Level": "Intermediate",
+        "url": "https://i.postimg.cc/Zn8ZTzpp/download-23.png"
       }
-    ]}]
-    }
+    ]}]}

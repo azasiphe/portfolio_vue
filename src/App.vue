@@ -1,16 +1,31 @@
+
+
+
 <template>
   <div id="app">
-    <NavbarComp/>
-    <router-view/>
+    <Navbar />
+    <router-view />
+    <FooterComp />
+    <Spinner v-if="loading" />
   </div>
 </template>
 
 <script>
-import NavbarComp from './components/navbarComp.vue';
+import Navbar from "./components/navbarComp.vue";
+import FooterComp from "./components/footerComp.vue";
+import Spinner from "./components/spinnerComp.vue";
+
 
 export default {
   components: {
-    NavbarComp,
+    Navbar,
+    FooterComp, 
+    Spinner
+  },
+  data() {
+    return {
+      loading: false,
+    };
   },
 };
 </script>
@@ -22,7 +37,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: red;
-  
-  
 }
 </style>
