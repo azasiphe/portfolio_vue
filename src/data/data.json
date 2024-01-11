@@ -1,57 +1,150 @@
 {
-    "data":[
-        {"education": [
-      {
-        "Id": 1,
-        "schoolName": "Kwamfundo High School",
-        "Year": " 2018 - 2022",
-        "description": "It was a great journey at school. Subjects included physics, maths, life science, and geography, which kept me longing for more challenges."
-      },
-      {
-        "Id": 2,
-        "schoolName": "Code Telligence",
-        "Year": "Jan 2023 - Jun 2023"
-      },
-      {
-        "Id": 3,
-        "schoolName": "Life Choices",
-        "Year": "Sep 2023 - Present"
-      }
-    ]},
-    {"skills": [
-      {
-        "Id": 1,
-        "skillName": "HTML",
-        "Level": "Intermediate",
-        "url": "https://i.postimg.cc/C5Vmp3w3/download-17.png"
-      },
-      {
-        "Id": 2,
-        "skillName": "CSS",
-        "Level": "Intermediate",
-        "url": "https://i.postimg.cc/W3ShsrVs/download-36.jpg"
-      },
-      
-      {
-        "Id": 3,
-        "skillName": "Vue.js",
-        "Level": "Intermediate",
-        "url": "https://i.postimg.cc/dtGD0zwW/download-19.png"
-      },
-      {
-        "Id": 4,
-        "skillName": "Python",
-        "Level": "Intermediate",
-        "url": "https://i.postimg.cc/FKCHqvVK/download-20.png"
-      },{
-        "Id": 5,
-        "skillName": "Bootstrap",
-        "Level": "Intermediate",
-        "url": "https://i.postimg.cc/CK5Fbtpp/download-22.png"
-      },{
-        "Id": 6,
-        "skillName": "Figma",
-        "Level": "Intermediate",
-        "url": "https://i.postimg.cc/Zn8ZTzpp/download-23.png"
-      }
-    ]}]}
+  "data": [
+    {
+      "education": [
+        {
+          "Id": 1,
+          "schoolName": "Kwamfundo High School",
+          "Year": " 2018 - 2022",
+          "description": "It was a great journey at school. Subjects included physics, maths, life science, and geography, which kept me longing for more challenges."
+        },
+        {
+          "Id": 2,
+          "schoolName": "Code Telligence",
+          "Year": "Jan 2023 - Jun 2023"
+        },
+        {
+          "Id": 3,
+          "schoolName": "Life Choices",
+          "Year": "Sep 2023 - Present"
+        }
+      ]
+    },
+    {
+      "skills": [
+        {
+          "Id": 1,
+          "skillName": "HTML",
+          "Level": "Intermediate",
+          "url": "https://i.postimg.cc/C5Vmp3w3/download-17.png"
+        },
+        {
+          "Id": 2,
+          "skillName": "CSS",
+          "Level": "Intermediate",
+          "url": "https://i.postimg.cc/W3ShsrVs/download-36.jpg"
+        },
+        {
+          "Id": 3,
+          "skillName": "Vue.js",
+          "Level": "Intermediate",
+          "url": "https://i.postimg.cc/dtGD0zwW/download-19.png"
+        },
+        {
+          "Id": 4,
+          "skillName": "Python",
+          "Level": "Intermediate",
+          "url": "https://i.postimg.cc/FKCHqvVK/download-20.png"
+        },
+        {
+          "Id": 5,
+          "skillName": "Bootstrap",
+          "Level": "Intermediate",
+          "url": "https://i.postimg.cc/CK5Fbtpp/download-22.png"
+        },
+        {
+          "Id": 6,
+          "skillName": "Figma",
+          "Level": "Intermediate",
+          "url": "https://i.postimg.cc/Zn8ZTzpp/download-23.png"
+        }
+      ]
+    },
+    {
+      "ProjectData": [
+        {
+          "id": 1,
+          "name": "To Do list",
+          "imageUrl": "https://i.ibb.co/Jmp7f5w/to-do.png",
+          "liveLink": "https://to-do-list-kumk1zdob-azasiphes-projects.vercel.app/",
+          "codeLink": "https://github.com/azasiphe/To-Do-List.git"
+        },
+        {
+          "id": 2,
+          "name": "Age to Days",
+          "imageUrl": "https://i.ibb.co/Ry5zzCF/Screenshot-2024-01-11-131116.png",
+          "liveLink": "https://days-calculator-gold.vercel.app/",
+          "codeLink": "https://github.com/azasiphe/days-calculator.git"
+        },
+        {
+          "id": 3,
+          "name": "Triangle area Calculator",
+          "imageUrl": "https://i.ibb.co/BfwyhJP/Screenshot-2024-01-11-132806.png",
+          "liveLink": "https://triangle-vert.vercel.app/",
+          "codeLink": "https://github.com/azasiphe/triangle.git"
+        },
+        {
+          "id": 4,
+          "name": "Keyboard",
+          "imageUrl": "https://i.ibb.co/0tHLJC5/Screenshot-2023-11-02-100200.png",
+          "liveLink": "",
+          "codeLink": ""
+        },
+        {
+          "id": 5,
+          "name": "Calculator",
+          "imageUrl": "https://i.ibb.co/rwThW97/Screenshot-2023-11-02-100014.png",
+          "liveLink": "https://netflix.com",
+          "codeLink": ""
+        },
+        {
+          "id": 6,
+          "name": "Netflix",
+          "imageUrl": "https://i.ibb.co/dfMCcm8/Screenshot-2023-11-02-100404.png",
+          "liveLink": "https://netflix.com",
+          "codeLink": ""
+        }
+      ]
+    },
+    {
+      "testimonials": [
+        {
+          "id": 1,
+          "imageUrl": "https://i.ibb.co/RTStVYK/port.png",
+          "name": "Onika Sileku",
+          "description": "Onika has been an excellent team member, contributing innovative ideas and problem-solving skills. Their dedication to every project is commendable."
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://i.ibb.co/RTStVYK/port.png",
+          "name": "Shaheem",
+          "description": "Shaheem is a talented developer with a keen eye for detail. Their commitment to delivering high-quality code and solutions is truly impressive."
+        },
+        {
+          "id": 3,
+          "imageUrl": "URL_FOR_SISIPHO_IMAGE",
+          "name": "Sisipho",
+          "description": "Sisipho is a creative thinker who always brings a fresh perspective to the team. Their ability to tackle complex problems head-on is remarkable."
+        },
+        {
+          "id": 4,
+          "imageUrl": "URL_FOR_RETHABILE_IMAGE",
+          "name": "Rethabile",
+          "description": "Rethabile's analytical skills and attention to detail make them an asset to any project. Their positive attitude and teamwork are truly appreciated."
+        },
+        {
+          "id": 5,
+          "imageUrl": "URL_FOR_ANATHI_IMAGE",
+          "name": "Anathi",
+          "description": "Anathi is a quick learner and adapts seamlessly to new technologies. Their dedication to continuous improvement and growth is inspiring."
+        },
+        {
+          "id": 6,
+          "imageUrl": "URL_FOR_SIVELELE_IMAGE",
+          "name": "Sivelele",
+          "description": "Sivelele is a reliable team player who consistently delivers on time. Their strong communication skills and collaborative spirit contribute to a positive work environment."
+        }
+      ]
+    }
+  ]
+}
