@@ -6,7 +6,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
       <router-link to="/resume">Resume</router-link>|
-      <router-link to="/projects">Projects</router-link>|
+      <router-link to="/project">Projects</router-link>|
       <router-link to="/testimonials">Testimonials</router-link>|
       <router-link to="/contact">Contact</router-link>
     </nav>
@@ -57,6 +57,7 @@ nav a.router-link-exact-active {
 margin-right: 590px;
   width:70px;
   border-radius: 70%;
+  border: 3px solid red;
   
 }
 </style>

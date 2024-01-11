@@ -22,8 +22,8 @@ const routes = [
     component:() =>import('../views/ResumeView.vue')
   } ,
   {
-    path: '/projects',
-    name: 'projects',
+    path: '/project',
+    name: 'project',
     component:() =>import('../views/ProjectView.vue')
   } ,
   {
