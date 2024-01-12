@@ -18,23 +18,45 @@
         </div>
       </div>
   </div>
+  <div v-if="loading" class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
 </div>
   
 
 </template>
 
+
 <script>
 export default {
+  data() {
+    return {
+      loading: true,
+    };
+  },
   computed: {
-  fetchDataproject() {
-    return this.$store.dispatch('fetchData');
-  }
-},
-mounted() {
-  this.fetchDataproject.catch(error => {
-    console.error('Error fetching data:', error);
-  });
-}
+    project() {
+      return this.$store.state.ProjectData;
+    },
+  },
+  mounted() {
+    this.fetchDataproject().then(() => {
+     
+      setTimeout(() => {
+        this.loading = false;
+      }, 1000);
+    }).catch((error) => {
+      console.error('Error fetching data:', error);
+      this.loading = false; 
+    });
+  },
+  methods: {
+    fetchDataproject() {
+      return this.$store.dispatch('fetchData');
+    },
+  },
 };
 </script>
 
@@ -107,4 +129,57 @@ p{
   color: black; 
 
   color: black;}
+
+
+  @media (max-width: 740px) {
+  .project-card {
+    flex-basis: calc(50% -100px);
+  }
+  
+  
+}
+
+@media (max-width: 800px) {
+  .project-card {
+    flex-basis: calc(150% - 20px);
+  }
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  margin: 4px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
 </style>

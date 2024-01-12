@@ -21,7 +21,7 @@
       </div>
 
       <h2>Skills</h2>
-      <div class="skills-container" v-if="$store.state.ResumeData.length > 1">
+      <div class="skills-container" v-if="$store.state.ResumeData.length > 1">  
         <div v-for="skill in $store.state.ResumeData[1].skills" :key="skill.Id" class="card skill-card">
           <div class="card-content">
             <img :src="skill.url" class="skill-image" />
@@ -29,26 +29,45 @@
           </div>
         </div>
       </div>
-      
+      <div v-if="loading" class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
-  
+  data() {
+    return {
+      loading: true,
+    };
+  },
   computed: {
+    resume() {
+      return this.$store.state.ResumeData;
+    },
+  },
+  mounted() { 
+    this.fetchDataresume().then(() => {
+      
+      setTimeout(() => {
+        this.loading = false;
+      }, 1000);
+    }).catch((error) => {
+      console.error('Error fetching data:', error);
+      this.loading = false; 
+    });
+  },
+  methods: {
     fetchDataresume() {
       return this.$store.dispatch('fetchData');
-    }
+    },
   },
-  mounted() {
-    this.fetchDataresume.catch(error => {
-      console.error('Error fetching data:', error);
-    });
-  }
 };
 </script>
+
 <style scoped>
 .about {
   text-align: center;
@@ -145,4 +164,58 @@ export default {
 h2 {
   text-decoration: underline 3px;
 }
+@media (max-width: 768px) {
+  .card-container {
+    margin-left: 0;
+  }
+
+  .skills-container {
+    display: block;
+  }
+
+  .skill-card::after {
+    content: none;
+  }
+  .skill-image{
+    width: 30%;
+  }
+}
+.spinner {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  margin: 4px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: bounce  2s infinite ease-in-out;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+h5{
+  text-decoration: underline 2px solid red;
+}
+
 </style>
