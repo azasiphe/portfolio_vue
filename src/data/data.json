@@ -110,39 +110,39 @@
       "testimonials": [
         {
           "id": 1,
-          "imageUrl": "https://i.ibb.co/RTStVYK/port.png",
+          "imageUrl": "https://i.ibb.co/TM60YRf/port.png",
           "name": "Onika Sileku",
-          "description": "Onika has been an excellent team member, contributing innovative ideas and problem-solving skills. Their dedication to every project is commendable."
+          "description": "Azasiphe has been an excellent team member, contributing innovative ideas and problem-solving skills. Their dedication to every project is commendable."
         },
         {
           "id": 2,
-          "imageUrl": "https://i.ibb.co/RTStVYK/port.png",
-          "name": "Shaheem",
-          "description": "Shaheem is a talented developer with a keen eye for detail. Their commitment to delivering high-quality code and solutions is truly impressive."
+          "imageUrl": "https://i.ibb.co/k8h5Y2Y/20231009-140910.jpg" ,
+          "name": "Shaheem Salie",
+          "description": "She is a talented developer with a keen eye for detail and commitment to delivering high-quality code and solutions is truly impressive."
         },
         {
           "id": 3,
-          "imageUrl": "URL_FOR_SISIPHO_IMAGE",
-          "name": "Sisipho",
-          "description": "Sisipho is a creative thinker who always brings a fresh perspective to the team. Their ability to tackle complex problems head-on is remarkable."
+          "imageUrl": "https://i.ibb.co/1b5Cgct/Whats-App-1kd.jpg",
+          "name": "Sisipho Mafrika ",
+          "description": "Azasiphe is a creative thinker who always brings a fresh perspective to the team. Their ability to tackle complex problems head-on is remarkable."
         },
         {
           "id": 4,
-          "imageUrl": "URL_FOR_RETHABILE_IMAGE",
-          "name": "Rethabile",
-          "description": "Rethabile's analytical skills and attention to detail make them an asset to any project. Their positive attitude and teamwork are truly appreciated."
+          "imageUrl": "https://i.ibb.co/ctdV52t/IMG-20240107-WA0005-065850-removebg-preview.png",
+          "name": "Rethabile  Makaotsi",
+          "description": "Azasiphe's analytical skills and attention to detail make them an asset to any project. Their positive attitude and teamwork are truly appreciated."
         },
         {
           "id": 5,
-          "imageUrl": "URL_FOR_ANATHI_IMAGE",
-          "name": "Anathi",
-          "description": "Anathi is a quick learner and adapts seamlessly to new technologies. Their dedication to continuous improvement and growth is inspiring."
+          "imageUrl": "https://i.ibb.co/6vgpm53/DSC-0316.jpg",
+          "name": "Anathi Josefu",
+          "description": "Azasipheis a quick learner and adapts seamlessly to new technologies. Their dedication to continuous improvement and growth is inspiring."
         },
         {
           "id": 6,
-          "imageUrl": "URL_FOR_SIVELELE_IMAGE",
-          "name": "Sivelele",
-          "description": "Sivelele is a reliable team player who consistently delivers on time. Their strong communication skills and collaborative spirit contribute to a positive work environment."
+          "imageUrl": "https://i.ibb.co/NLdjpjn/Whats-App-Image-2024-01-11-at-07-51-54-bd4bb006.jpg",
+          "name": "Sivelele Nkamane",
+          "description": "Azasiphe is a reliable team player who consistently delivers on time. Their strong communication skills and collaborative spirit contribute to a positive work environment."
         }
       ]
     }
