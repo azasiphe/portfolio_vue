@@ -21,11 +21,12 @@ export default createStore({
   },
   actions: {
     fetchData({ commit }) {
-      axios.get('http://localhost:3333/data')
+      axios.get('https://azasiphe.github.io/portfoliodata/')
         .then(response => {
-          commit('resumeData', response.data);
-          commit('projectData', response.data[2].ProjectData);
-          commit('testimonialsData', response.data[3].testimonials);
+          console.log(response.data.data)
+          commit('resumeData', response.data.data);
+          commit('projectData', response.data.data[2].ProjectData);
+          commit('testimonialsData', response.data.data[3].testimonials);
         })
         .catch(error => {
           console.error('Error fetching data:', error);
