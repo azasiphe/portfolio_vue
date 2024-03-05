@@ -40,6 +40,9 @@ My current skill stack includes:
 - JavaScript and Vue.js: I am proficient in JavaScript, and I have experience working with Vue.js to build dynamic and interactive user interfaces. Vue.js, in particular, has become an integral part of my toolkit for its simplicity and efficiency.
 
 </p>
+<p>
+     -Node.js : allows me to develop server-side applications and APIs. I enjoy the challenge of architecting scalable and efficient backend systems, ensuring smooth communication between the frontend and backend components of a project.
+        </p>
 <p  class="pp">
  Passion for Learning:
 </p>
@@ -97,12 +100,12 @@ export default{
   .container {
     width: 10%;
     height: 120vh;
-    margin: 0 0 0 7%;
+    margin: 0 0 0 6%;
     position: relative;
   }
 
   .cont2 {
-    margin-top: -60%;
+    margin-top: -70%;
     position: relative;
   }
 
@@ -114,17 +117,18 @@ export default{
     border: 5px solid red;
     box-sizing: border-box;
     border-radius: 10px;
-    position: relative;
+    
   }
 
   .img-a {
-    width: 30%;
+    width: 26%;
     height: 100%;
     margin-left: -8%;
     border-top: 4px solid red;
     border-bottom: 4px solid red;
     border-radius: 10px;
     position: relative;
+    margin-bottom: 5px;
   }
 
   .img-a::before {
@@ -139,13 +143,25 @@ export default{
 
   .both {
     display: flex;
-    margin-bottom: 30%;
+    margin-bottom: 40%;
+ 
     position: relative;
   }
 
   .background {
     width: 100%;
     height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border: 5px solid red;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .blurred-background::before {
+    width: 1000%;
+    height: 50%;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(15px);
     border: 5px solid red;
@@ -214,29 +230,28 @@ h5{
   text-decoration: underline 2px solid red;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 390px) {
   .real {
     padding: 5%; 
   }
 
-  .both {
-    flex-direction: column;
-  }
+ 
 
   .img-a {
-    width: 100%; 
-    margin-left: 0;
+    width: 50%; 
+    margin-left: 85px;
     margin-bottom: 10px; 
   }
 
-  .container {
-    width: 10%; 
-    height: 10%;
+  .blurred-background{
+    width: 90%; 
+    height: 100%;
     
   }
-
+  
   .cont2 {
     margin-top: 0; 
+    padding: 70%;
   }
 }
 </style>

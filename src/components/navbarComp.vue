@@ -62,10 +62,16 @@ nav a.router-link-exact-active {
 }
 
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .links {
-    flex-direction: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 15px;
   }
 
   nav a {
@@ -73,7 +79,7 @@ nav a.router-link-exact-active {
   }
 
   .logo {
-    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
 </style>

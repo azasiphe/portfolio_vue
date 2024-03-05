@@ -175,9 +175,10 @@ h2 {
 
   .skill-card::after {
     content: none;
+    width: 40%;
   }
   .skill-image{
-    width: 30%;
+    width: 40%;
   }
 }
 .spinner {

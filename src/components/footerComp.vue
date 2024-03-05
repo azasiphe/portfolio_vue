@@ -26,5 +26,6 @@ export default {
   
   bottom: 0;
   width: 100%;
+  position: relative;
 }
 </style>

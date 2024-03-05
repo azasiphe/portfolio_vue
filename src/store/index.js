@@ -17,6 +17,7 @@ export default createStore({
     },
     testimonialsData(state, data) {
       state.TestimonialsData = data;
+   
     },
   },
   actions: {
@@ -30,6 +31,7 @@ export default createStore({
         })
         .catch(error => {
           console.error('Error fetching data:', error);
+          window.location.reload()
         });
     }
   },

@@ -52,6 +52,8 @@ export default {
     testimonials() {
       return this.$store.state.TestimonialsData;
     },
+
+    
   },
   mounted() { 
     this.fetchDatatestimonials().then(() => {
@@ -61,7 +63,7 @@ export default {
       }, 1000);
     }).catch((error) => {
       console.error('Error fetching data:', error);
-      this.loading = false; 
+      this.loading = true; 
     });
   },
   methods: {

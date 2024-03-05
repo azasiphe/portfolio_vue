@@ -99,10 +99,10 @@
         },
         {
           "id": 6,
-          "name": "Netflix",
+          "name": "Ecommerce",
           "imageUrl": "https://i.ibb.co/dfMCcm8/Screenshot-2023-11-02-100404.png",
-          "liveLink": "https://netflix.com",
-          "codeLink": ""
+          "liveLink": "",
+          "codeLink": "https://github.com/azasiphe/node_project.git"
         }
       ]
     },

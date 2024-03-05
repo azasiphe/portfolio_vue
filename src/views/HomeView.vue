@@ -8,7 +8,8 @@
       </div>
       <div class="about-home">
         <div class="texts">
-          <h1 class="name typing-text">AZASIPHE NDORO</h1>
+          <h1 class="name typing-text">AZASIPHE </h1>
+          <h1 class="name typing-text"> NDORO</h1>
           <h4 class="role">An aspiring software developer</h4>
           <div class="icons">
             <a href="https://github.com/" target="_blank">
@@ -37,6 +38,7 @@ export default {
     return {
       loading: true,
     };
+    
   },
   mounted() {
     setTimeout(() => {
@@ -72,8 +74,7 @@ export default {
 }
 
 .image-home {
-  width: 100%;
-  margin-top: 10px;
+
   margin-left: -750px;
 }
 
@@ -182,28 +183,32 @@ h5{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   .home {
     background-size: cover; 
   }
 
   .both {
-   
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
   }
 
   .image-container {
-    width: 20%; 
-    margin: 20px auto;
+    width: 60%; 
+    margin: 20px auto 0;
+  }
+
+  .image-home {
+    width: 100%; 
   }
 
   .about-home {
- align-items: center
- ;
- justify-content: center;
- text-align: center; 
- width: 100%;
-
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    width: 100%;
   }
 
   .texts {
@@ -211,7 +216,8 @@ h5{
   }
 
   .name {
-    font-size: 3em; }
+    font-size: 3em; 
+  }
 
   .role {
     font-size: 1.5em; 
@@ -228,6 +234,6 @@ h5{
   .cv-button {
     margin-top: 10px;
     font-size: 0.8em; 
-  }}
-
+  }
+}
 </style>
