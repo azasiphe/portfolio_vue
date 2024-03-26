@@ -1,4 +1,4 @@
-<template>
+`<template>
   <footer class="footer">
     <div class="cont">
       &copy; {{ currentYear }} Azasiphe Ndoro
@@ -28,4 +28,4 @@ export default {
   width: 100%;
   position: relative;
 }
-</style>
+</style>`

@@ -12,9 +12,11 @@
       </div>
   <div class="both">
 <img src="https://i.postimg.cc/yxDpN0J0/IMG-20230531-WA0015.jpg" class="img-a">
-<div class="container">
-  <div class="blurred-background">
-<p>Hello! I'm Azasiphe Ndoro, an aspiring fullstack developer with a current focus on front-end development. I find joy in every aspect of the design process, from collaborative discussions to bringing ideas to life through code.
+
+ 
+<div class="background">
+  <p class="pp"> Who am i?</p>
+  <p>Hello! I'm Azasiphe Ndoro, an aspiring fullstack developer with a current focus on front-end development. I find joy in every aspect of the design process, from collaborative discussions to bringing ideas to life through code.
 </p>
 <p class="pp"> What I Do?</p>
 
@@ -22,27 +24,6 @@
 
 As a front-end developer, I specialize in crafting engaging and user-friendly interfaces. I am passionate about creating seamless experiences that not only look good but also deliver exceptional functionality. I thrive on the challenges of turning design concepts into interactive and responsive web applications.
 </p>
-  </div>
-  </div>
-  </div>
-  <div class="cont2">
-<div class="background">
-<p class="pp">
-
-
-My current skill stack includes:
-</p>
-<p>
-- HTML/CSS: These are the building blocks of the web, and I have a solid foundation in creating well-structured and visually appealing layouts.
-<br>
-- Bootstrap: I leverage Bootstrap to enhance the responsiveness and styling of my projects, ensuring they look great on various devices.
-<br>
-- JavaScript and Vue.js: I am proficient in JavaScript, and I have experience working with Vue.js to build dynamic and interactive user interfaces. Vue.js, in particular, has become an integral part of my toolkit for its simplicity and efficiency.
-
-</p>
-<p>
-     -Node.js : allows me to develop server-side applications and APIs. I enjoy the challenge of architecting scalable and efficient backend systems, ensuring smooth communication between the frontend and backend components of a project.
-        </p>
 <p  class="pp">
  Passion for Learning:
 </p>
@@ -79,6 +60,8 @@ export default{
     background-color: red;
     padding: 15px;
     color: black;
+    position: relative;
+    top: 20px;
   }
 
   .real {
@@ -97,12 +80,7 @@ export default{
     font-style: italic;
   }
 
-  .container {
-    width: 10%;
-    height: 120vh;
-    margin: 0 0 0 6%;
-    position: relative;
-  }
+ 
 
   .cont2 {
     margin-top: -70%;
@@ -143,9 +121,10 @@ export default{
 
   .both {
     display: flex;
-    margin-bottom: 40%;
- 
+   
+ gap: 8%;
     position: relative;
+    bottom: 30px;
   }
 
   .background {

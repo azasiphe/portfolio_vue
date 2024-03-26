@@ -1,15 +1,18 @@
-
-
 <template>
-  <div class="home">
-    <div class="both">
-      <div class="image-container">
-        <img src="https://i.ibb.co/mq0jsvS/IMG-20230707-WA0114-removebg-preview-1-removebg-preview.png" class="image-home"/>
+  <div class="stars" >
+   
+    <div class="welcome-section"  style="background-color: black;">
+      <div class="space"  style="background-color: black;"></div>
+      <div class="mid-label"  style="background-color: black; color: antiquewhite">
+        <div class="mid-label__text" style="background-color: black; color: antiquewhite;">WELCOME TO AZASIPHE'S PORTFOLIO!</div>
       </div>
+    </div>
+
+   
+    <div class="home" v-if="showHomePage">
       <div class="about-home">
         <div class="texts">
-          <h1 class="name typing-text">AZASIPHE </h1>
-          <h1 class="name typing-text"> NDORO</h1>
+          <h1 class="name typing-text">AZASIPHE/NDORO</h1>
           <h4 class="role">An aspiring software developer</h4>
           <div class="icons">
             <a href="https://github.com/" target="_blank">
@@ -21,45 +24,52 @@
           </div>
           <button @click="downloadCV" class="cv-button">Download CV</button>
         </div>
-      </div>
-      <div v-if="loading" class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
+        <i id="moveDown" class="fa fa-chevron-down fa-3x" :class="{ 'shake': shakeAnimation }" @click="navigateToAbout"></i>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       loading: true,
+      shakeAnimation: false,
+      showHomePage: false 
     };
-    
   },
   mounted() {
     setTimeout(() => {
       this.loading = false;
+      setTimeout(() => {
+        this.showHomePage = true;
+      }, 7500); 
     }, 1000);
   },
   methods: {
     downloadCV() {
-      
       window.open('https://i.ibb.co/Tg4874Z/Gray-and-Blush-Feminine-Resume.jpg', '_blank');
+    },
+    navigateToAbout() {
+      this.$router.push('/about');
+      this.shakeAnimation = true;
+      setTimeout(() => {
+        this.shakeAnimation = false;
+      }, 1000); 
     },
   },
 };
 </script>
 
+
+
 <style scoped>
 .home {
-  background-image: url(https://i.ibb.co/0yRs0jW/download-24.png);
+  background-image: url(https://i.ibb.co/TmvnBRg/space-4085276-1280.jpg);
   background-size: cover;
   width: 100%;
-  height: auto;
+  height: 80vh;
 }
 
 .both {
@@ -70,7 +80,7 @@ export default {
 }
 
 .image-container {
-  width: 35%;
+  width: 55%;
 }
 
 .image-home {
@@ -81,6 +91,9 @@ export default {
 .about-home {
   text-align: center;
   margin-top: 15px;
+  position: relative;
+  top: 32%;
+  margin: 0 0 0 10%;
 }
 
 .texts {
@@ -133,6 +146,8 @@ export default {
   font-size: 2em;
 }
 
+
+
 .cv-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -165,6 +180,196 @@ export default {
 
 .spinner .bounce2 {
   animation-delay: -0.16s;
+}
+body {
+  background-color: #111214;
+  font-family: "Onest", sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0;
+
+  width: 100vw;
+}
+
+.display-none {
+  display: none;
+  height: 1px;
+  opacity: 0;
+  visibility: hidden;
+  width: 1px;
+}
+
+div[data-star1] {
+  animation: animate 0.8s ease-in both;
+  animation-iteration-count: 8;
+  background-color: darkorange;
+  height: 0.7vmin;
+  left: 30%;
+  position: relative;
+  transform: translateZ(-110vmin) rotateY(90deg) rotateX(var(--b))
+    translateZ(var(--a)) scaleX(1);
+  top: 0%;
+  width: 1.3vmin;
+  will-change: scale, transform;
+}
+
+div[data-star2] {
+  animation: animate 0.6s ease-in both;
+  animation-iteration-count: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 0.4vmin;
+  left: 30%;
+  position: relative;
+  transform: translateZ(-100vmin) rotateY(90deg) rotateX(var(--b))
+    translateZ(var(--a)) scaleX(1);
+  top: 10%;
+  width: 1.6vmin;
+  will-change: scale, transform;
+}
+
+div[data-star3] {
+  animation: animate 0.5s ease-in both;
+  animation-iteration-count: 8;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 1.6vmin;
+  left: 30%;
+  position: relative;
+  transform: translateZ(-170vmin) rotateY(90deg) rotateX(var(--b))
+    translateZ(var(--a)) scaleX(1);
+  top: 10%;
+  width: 1.6vmin;
+  will-change: scale, transform;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  30%,
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateZ(0vmin) rotateY(90deg) rotateX(var(--b))
+      translateZ(var(--a)) scaleX(5);
+  }
+}
+
+
+
+.space {
+  animation: bkg-anim 12s ease-in-out 1s both;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 10vmin;
+  position: fixed;
+  top: 0;
+  transform: rotateX(80deg) rotateY(145deg) scaleY(0.05) scaleX(0.3)
+    translateZ(0);
+  width: 100vw;
+  will-change: transform, background-color, opacity;
+  z-index: -1;
+}
+
+@keyframes bkg-anim {
+  0% {
+    background-color: #111214;
+    opacity: 1;
+    transform: rotateX(50deg) rotateY(90deg) scaleY(0.05) scaleX(0.3);
+  }
+
+  10% {
+    background-color: #fff;
+    transform: rotateX(80deg) rotateY(145deg) scaleY(0.05) scaleX(0.3);
+  }
+
+  15% {
+    transform: rotateX(80deg) rotateY(145deg) scaleY(0.3) scaleX(0.6);
+  }
+
+  20% {
+    background-color: #fff;
+  }
+
+  32% {
+    background-color: transparent;
+    transform: scaleY(1) scaleX(1);
+  }
+
+  70% {
+    opacity: 0.8;
+    transform: rotateX(0) rotateY(0) scaleY(1) scaleX(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+}
+
+.mid-label {
+  display: grid;
+  left: 0;
+  height: 100vh;
+  margin: 0;
+  place-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: -10000;
+}
+
+.mid-label__text {
+  animation: show-mid-label 14.2s ease-in-out both;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 0.16rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@keyframes show-mid-label {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    color: #111214;
+    opacity: 0;
+    letter-spacing: 4vw;
+  }
+
+  78% {
+    color: #eeeeee;
+    opacity: 0.4;
+    letter-spacing: 0.16rem;
+  }
+
+  85% {
+    color: #fff;
+    font-size: 2rem;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  90% {
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 0.16rem;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    color: #9e9e9e;
+    letter-spacing: 0.16rem;
+    font-size: 2rem;
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes bounce {
@@ -203,7 +408,15 @@ h5{
   .image-home {
     width: 100%; 
   }
+  @keyframes shake {
+  0% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80%, 100% { transform: translateX(10px); }
+}
 
+.shake {
+  animation: shake 1s ease;
+}
   .about-home {
     align-items: center;
     justify-content: center;

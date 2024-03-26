@@ -3,7 +3,7 @@
     <div class="logo">
       <img src="https://i.postimg.cc/PJM7dyMR/images-25.jpg" alt="Logo" />
     </div>
-    <div class="links">
+    <div class="links" :class="{ 'show-links': showMenu }">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/resume">Resume</router-link> |
@@ -11,19 +11,35 @@
       <router-link to="/testimonials">Testimonials</router-link> |
       <router-link to="/contact">Contact</router-link>
     </div>
+    <div class="toggle-button" @click="toggleMenu">
+      <i class="fas fa-bars"></i>
+    </div>
   </nav>
 </template>
 
 <script>
 export default {
   name: 'NavbarComp',
+  data() {
+    return {
+      showMenu: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    }
+  }
 };
 </script>
 
 <style scoped>
+
 nav {
   display: flex;
   padding: 15px;
+  position: relative;
+  top: 20px;
   background-color: black;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +77,26 @@ nav a.router-link-exact-active {
   border-radius: 5px;
 }
 
+.toggle-button {
+  display: none; /* Initially hide toggle button */
+  cursor: pointer;
+}
+
+.toggle-button i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.show-links {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: black;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -68,18 +104,11 @@ nav a.router-link-exact-active {
   }
 
   .links {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 15px;
+    display: none;
   }
 
-  nav a {
-    margin: 10px 0;
-  }
-
-  .logo {
-    margin-bottom: 15px;
+  .toggle-button {
+    display: block; 
   }
 }
 </style>
