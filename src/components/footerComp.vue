@@ -1,12 +1,12 @@
 `<template>
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="cont">
       &copy; {{ currentYear }} Azasiphe Ndoro
     </div>
-  </footer>
+  </footer> -->
 </template>
 
-<script>
+<!-- <script>
 export default {
   name: 'FooterComp',
   data() {
@@ -15,7 +15,7 @@ export default {
     };
   },
 };
-</script>
+</script> -->
 
 <style scoped>
 .footer {

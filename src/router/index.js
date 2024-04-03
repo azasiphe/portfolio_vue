@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
+import HomeView from '../views/HomeView';
 import AboutView from '../views/AboutView.vue';
 import ResumeView from '../views/ResumeView.vue';
 import ProjectView from '../views/ProjectView.vue';
@@ -8,7 +8,7 @@ import ContactView from '../views/ContactView.vue';
 
 const routes = [
   { path: '/', redirect: '/home' }, 
-  { path: '/home', name: 'home', component: HomeView },
+  { path: '/', name: 'home', component: HomeView },
   { path: '/about', name: 'about', component: AboutView },
   { path: '/resume', name: 'resume', component: ResumeView },
   { path: '/project', name: 'project', component: ProjectView },

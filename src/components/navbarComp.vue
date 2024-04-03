@@ -78,7 +78,7 @@ nav a.router-link-exact-active {
 }
 
 .toggle-button {
-  display: none; /* Initially hide toggle button */
+  display: none; 
   cursor: pointer;
 }
 
