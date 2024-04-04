@@ -31,7 +31,7 @@ export default createStore({
         })
         .catch(error => {
           console.error('Error fetching data:', error);
-          window.location.reload()
+          
         });
     }
   },

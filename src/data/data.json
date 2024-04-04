@@ -89,22 +89,22 @@
           "id": 4,
           "name": "Keyboard",
           "imageUrl": "https://i.ibb.co/0tHLJC5/Screenshot-2023-11-02-100200.png",
-          "liveLink": "",
-          "codeLink": ""
+          "liveLink": "keyboard2-5d0c7ftgg-azasiphes-projects.vercel.app",
+          "codeLink": "https://github.com/azasiphe/keyboard-android.git"
         },
         {
           "id": 5,
-          "name": "Calculator",
-          "imageUrl": "https://i.ibb.co/rwThW97/Screenshot-2023-11-02-100014.png",
-          "liveLink": "https://netflix.com",
-          "codeLink": ""
+          "name": "Turbo website",
+          "imageUrl": "https://i.ibb.co/6rTZ6mg/Screenshot-2024-04-04-154906.png" ,
+          "liveLink": "capstone-project-45314.firebaseapp.com",
+          "codeLink": "https://github.com/azasiphe/capstone-project.git"
         },
         {
           "id": 6,
           "name": "Ecommerce",
           "imageUrl": "https://i.ibb.co/dfMCcm8/Screenshot-2023-11-02-100404.png",
-          "liveLink": "",
-          "codeLink": "https://github.com/azasiphe/node_project.git"
+          "liveLink": "netflix-l1qct0yum-azasiphes-projects.vercel.app",
+          "codeLink": "https://github.com/azasiphe/netflix.git"
         }
       ]
     },
