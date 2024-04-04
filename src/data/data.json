@@ -11,12 +11,14 @@
         {
           "Id": 2,
           "schoolName": "Code Telligence",
-          "Year": "Jan 2023 - Jun 2023"
+          "Year": "Jan 2023 - Jun 2023",
+          "description": "It was a challanging journey i was doing lot of module in a short of period of time but these lot of things i've learnt in tht time  ."
         },
         {
           "Id": 3,
           "schoolName": "Life Choices",
-          "Year": "Sep 2023 - Present"
+          "Year": "Sep 2023 - march 2024",
+          "description": "I've learnt a lot in the academy technical work,soft skills personal development and also work ethics ,it was a quit greate journey "
         }
       ]
     },

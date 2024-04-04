@@ -5,10 +5,10 @@
     </div>
     <div class="links" :class="{ 'show-links': showMenu }">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/resume">Resume</router-link> |
-      <router-link to="/project">Projects</router-link> |
-      <router-link to="/testimonials">Testimonials</router-link> |
+      <router-link to="/">About</router-link> |
+      <router-link to="/resume">Education</router-link> |
+      <router-link to="/project">My work</router-link> |
+      <router-link to="/testimonials">Reviews</router-link> |
       <router-link to="/contact">Contact</router-link>
     </div>
     <div class="toggle-button" @click="toggleMenu">

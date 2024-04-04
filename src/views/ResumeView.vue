@@ -6,9 +6,11 @@
 
     
     <div class="alli">
-      <h2>Education</h2>
-      <div class="card-container" v-if="$store.state.ResumeData.length > 0">
-        <div v-for="edu in $store.state.ResumeData[0].education" :key="edu.Id" class="card">
+  <h2>Education</h2>
+  <div class="card-container" v-if="$store.state.ResumeData.length > 0">
+    <div v-for="edu in $store.state.ResumeData[0].education" :key="edu.Id" class="card">
+      <div class="card-inner" ontouchstart="this.classList.toggle('hover');">
+        <div class="card-front">
           <div class="card-icon">
             🎓
           </div>
@@ -16,9 +18,16 @@
             <p>{{ edu.schoolName }}</p>
             <p>{{ edu.Year }}</p>
           </div>
-          
+        </div>
+        <div class="card-back">
+          <div class="card-content2">
+            <p>{{edu.description }}</p>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
       <h2>Skills</h2>
       <div class="skills-container" v-if="$store.state.ResumeData.length > 1">  
@@ -35,7 +44,7 @@
         <div class="bounce3"></div>
       </div>
     </div>
-  </div>
+ 
 </template>
 <script>
 export default {
@@ -76,50 +85,39 @@ export default {
   padding: 15px;
   color: black;
 }
-
-.alli {
-  background-color: black;
-  padding: 20px;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 25%;
-}
-
 .card {
-  background-color: red;
-  border: 3px solid white;
-  border-radius: 5px;
-  margin: 20px;
-  padding: 15px;
-  display: flex;
-  position: relative;
+  width: 200px; /* adjust the width as needed */
+  height: 200px; /* adjust the height as needed */
+  perspective: 1000px;
 }
 
-.card-icon {
-  margin-right: 10px;
-}
-
-.card-content {
-  z-index: 2; 
-  position: relative;
-}
-
-.card-description {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+.card-inner {
   width: 100%;
-  padding: 10px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
 }
 
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
 
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.card-front {
+  background-color: #fff; /* adjust as needed */
+}
+
+.card-back {
+  background-color: #f0f0f0; /* adjust as needed */
+  transform: rotateY(180deg);
+}
 
 .skills-container {
   display: flex;

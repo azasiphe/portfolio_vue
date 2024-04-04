@@ -1,4 +1,5 @@
 <template>
+
   <div class="stars" >
    
     <div class="welcome-section"  style="background-color: black;">
@@ -12,7 +13,7 @@
     <div class="home" v-if="showHomePage">
       <div class="about-home">
         <div class="texts">
-          <h1 class="name typing-text">AZASIPHE/NDORO</h1>
+          <h1 class="name typing-text" id="trade-winds-regular">AZASIPHE NDORO</h1>
           <h4 class="role">An aspiring software developer</h4>
           <div class="icons">
             <a href="https://github.com/" target="_blank">
@@ -22,12 +23,55 @@
               <i class="fab fa-linkedin icon"></i>
             </a>
           </div>
-          <button @click="downloadCV" class="cv-button">Download CV</button>
+          <button @click="downloadCV" class="cv-button">View my CV</button>
         </div>
         <i id="moveDown" class="fa fa-chevron-down fa-3x" :class="{ 'shake': shakeAnimation }" @click="navigateToAbout"></i>
       </div>
     </div>
   </div>
+
+ <!-- about page -->
+ <section id="about" class="container-fluid" v-if="showHomePage">
+
+<div class="row section-banner" >
+  <div class="col-md-offset-3 col-md-6 text-center">
+    <div>
+      <span class="line about"></span>
+      <span class="trade-winds-regular">about me</span>
+      <span class="line about"></span>
+    </div>
+  </div>
+</div>
+
+
+<div class="row max">
+
+  <div class="col-sm-4 text-center">
+    <div class="desc">
+      <div class="icon-me"><i class="fa fa-user"></i></div>
+      <p>A fullstack developer with a current focus on front-end development. I find joy in every aspect of the design process, from collaborative discussions to bringing ideas to life through code.</p>
+    </div>
+  </div>
+
+  <div class="col-sm-4 text-center">
+    <div class="desc">
+      <div class="icon-me"><i class="fa fa-mortar-board"></i></div>
+      <p>As a front-end developer, I specialize in crafting engaging and user-friendly interfaces. I am passionate about creating seamless experiences that not only look good but also deliver exceptional functionality. I thrive on the challenges of turning design concepts into interactive and responsive web applications.</p>
+    </div>
+  </div>
+
+  <div class="col-sm-4 text-center">
+    <div class="desc">
+      <div class="icon-me"><i class="fa fa-rocket"></i></div>
+      <p>In addition to my core skills, I am continuously expanding my knowledge and exploring new technologies. I believe that staying curious and embracing new challenges are essential traits for a developer.</p>
+    </div>
+  </div>
+
+</div>
+
+
+</section>
+
 </template>
 
 <script>
@@ -35,8 +79,8 @@ export default {
   data() {
     return {
       loading: true,
-      shakeAnimation: false,
-      showHomePage: false 
+      shakeAnimation: true,
+      showHomePage: true 
     };
   },
   mounted() {
@@ -55,7 +99,7 @@ export default {
       this.$router.push('/about');
       this.shakeAnimation = true;
       setTimeout(() => {
-        this.shakeAnimation = false;
+        this.shakeAnimation = true;
       }, 1000); 
     },
   },
@@ -70,6 +114,7 @@ export default {
   background-size: cover;
   width: 100%;
   height: 80vh;
+  
 }
 
 .both {
@@ -98,7 +143,7 @@ export default {
 
 .texts {
   color: red;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-left: -250px;
 }
 
@@ -448,5 +493,59 @@ h5{
     margin-top: 10px;
     font-size: 0.8em; 
   }
+}
+
+/* about */
+#about {
+  width: 100vw;
+  background-color:black;
+  color: #eeeeee;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+
+
+.icon-me {
+  text-align: center;
+  font-size: 5em;
+  color: red;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
+}
+.section-title.about {
+  color: rgba(0, 0, 0, 0.54);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
+}
+.line {
+  height: 3px;
+  width: 100px;
+  position: relative;
+  top: -12px;
+  display: inline-block;
+  background-color: #999;
+}
+p
+.line.about {
+  background-color: rgba(0, 0, 0, 0.54);
+}
+.trade-winds-regular {
+  font-family: "Trade Winds", system-ui;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+text-shadow: red 5px 4px 8px;
+  font-size: 50px;
+
+}
+#trade-winds-regular {
+  font-family: "Trade Winds", system-ui;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+
+  font-size: 50px;
+
 }
 </style>

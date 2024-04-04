@@ -1,24 +1,42 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView';
-import AboutView from '../views/AboutView.vue';
-import ResumeView from '../views/ResumeView.vue';
-import ProjectView from '../views/ProjectView.vue';
-import TestimonialsView from '../views/TestimonialsView.vue';
-import ContactView from '../views/ContactView.vue';
-
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 const routes = [
-  { path: '/', redirect: '/home' }, 
-  { path: '/', name: 'home', component: HomeView },
-  { path: '/about', name: 'about', component: AboutView },
-  { path: '/resume', name: 'resume', component: ResumeView },
-  { path: '/project', name: 'project', component: ProjectView },
-  { path: '/testimonials', name: 'testimonials', component: TestimonialsView },
-  { path: '/contact', name: 'contact', component: ContactView }
-];
-
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView
+  },
+  {
+    path: '/about',
+    name: 'about',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path:'/resume',
+    name:'resume',
+    component:()=> import('@/views/ResumeView.vue')
+  },
+  {
+    path:'/testimonials',
+    name:'testimonials',
+    component:()=> import('@/views/TestimonialsView.vue')
+  },
+  {
+    path:'/project',
+    name:'project',
+    component:()=> import('@/views/ProjectView.vue')
+  },
+  {
+    path:'/contact',
+    name:'contact',
+    component:()=> import('@/views/ContactView.vue')
+  }
+]
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
-});
-
-export default router;
+})
+export default router
